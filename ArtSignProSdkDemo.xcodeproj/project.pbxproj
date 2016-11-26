@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED02A44C1DD9AE6A00D2BF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02A44B1DD9AE6A00D2BF95 /* AppDelegate.swift */; };
+		ED02A44E1DD9AE6A00D2BF95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02A44D1DD9AE6A00D2BF95 /* ViewController.swift */; };
+		ED02A4511DD9AE6A00D2BF95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED02A44F1DD9AE6A00D2BF95 /* Main.storyboard */; };
+		ED02A4531DD9AE6A00D2BF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED02A4521DD9AE6A00D2BF95 /* Assets.xcassets */; };
+		ED02A4561DD9AE6A00D2BF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED02A4541DD9AE6A00D2BF95 /* LaunchScreen.storyboard */; };
+		F1A9885A1AC530091C1FD398 /* Pods_ArtSignProSdkDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5EFBE3AFA22ACF5CA5AFA8 /* Pods_ArtSignProSdkDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7B5EFBE3AFA22ACF5CA5AFA8 /* Pods_ArtSignProSdkDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtSignProSdkDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FFABC7A65A76BF2C30B74C0 /* Pods-ArtSignProSdkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSignProSdkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtSignProSdkDemo/Pods-ArtSignProSdkDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AEEDC206DF406A05F5F23296 /* Pods-ArtSignProSdkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSignProSdkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtSignProSdkDemo/Pods-ArtSignProSdkDemo.release.xcconfig"; sourceTree = "<group>"; };
+		ED02861E1DDEACC8007402E0 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		ED02861F1DDEACC8007402E0 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		ED0286201DDEACC8007402E0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		ED0286241DDEACE4007402E0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		ED0286261DDEB5D5007402E0 /* ArtSignProSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArtSignProSdk.framework; path = "../../../Library/Developer/Xcode/DerivedData/ArtSignProSdkDemo-ansdyvyqglanudbplglyaptbgyzo/Build/Products/Debug-iphonesimulator/ArtSignProSdk/ArtSignProSdk.framework"; sourceTree = "<group>"; };
+		ED02A4481DD9AE6A00D2BF95 /* ArtSignProSdkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtSignProSdkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED02A44B1DD9AE6A00D2BF95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED02A44D1DD9AE6A00D2BF95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED02A4501DD9AE6A00D2BF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED02A4521DD9AE6A00D2BF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED02A4551DD9AE6A00D2BF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED02A4571DD9AE6A00D2BF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE4CD341DE9548B00750470 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		EDE4CD351DE9548B00750470 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED02A4451DD9AE6A00D2BF95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1A9885A1AC530091C1FD398 /* Pods_ArtSignProSdkDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38D53818B22E151BFD2AD99B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FFABC7A65A76BF2C30B74C0 /* Pods-ArtSignProSdkDemo.debug.xcconfig */,
+				AEEDC206DF406A05F5F23296 /* Pods-ArtSignProSdkDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB95B48DB3BBF275CFB845F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED0286261DDEB5D5007402E0 /* ArtSignProSdk.framework */,
+				ED0286241DDEACE4007402E0 /* libsqlite3.tbd */,
+				ED02861E1DDEACC8007402E0 /* libc.tbd */,
+				ED02861F1DDEACC8007402E0 /* libstdc++.tbd */,
+				ED0286201DDEACC8007402E0 /* libz.tbd */,
+				7B5EFBE3AFA22ACF5CA5AFA8 /* Pods_ArtSignProSdkDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED02A43F1DD9AE6A00D2BF95 = {
+			isa = PBXGroup;
+			children = (
+				ED02A44A1DD9AE6A00D2BF95 /* ArtSignProSdkDemo */,
+				ED02A4491DD9AE6A00D2BF95 /* Products */,
+				38D53818B22E151BFD2AD99B /* Pods */,
+				BB95B48DB3BBF275CFB845F4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ED02A4491DD9AE6A00D2BF95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED02A4481DD9AE6A00D2BF95 /* ArtSignProSdkDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED02A44A1DD9AE6A00D2BF95 /* ArtSignProSdkDemo */ = {
+			isa = PBXGroup;
+			children = (
+				ED02A44B1DD9AE6A00D2BF95 /* AppDelegate.swift */,
+				ED02A44D1DD9AE6A00D2BF95 /* ViewController.swift */,
+				ED02A44F1DD9AE6A00D2BF95 /* Main.storyboard */,
+				ED02A4521DD9AE6A00D2BF95 /* Assets.xcassets */,
+				ED02A4541DD9AE6A00D2BF95 /* LaunchScreen.storyboard */,
+				ED02A4571DD9AE6A00D2BF95 /* Info.plist */,
+			);
+			path = ArtSignProSdkDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED02A4471DD9AE6A00D2BF95 /* ArtSignProSdkDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED02A45A1DD9AE6A00D2BF95 /* Build configuration list for PBXNativeTarget "ArtSignProSdkDemo" */;
+			buildPhases = (
+				9E1B012895198E8CF8AFC46B /* [CP] Check Pods Manifest.lock */,
+				ED02A4441DD9AE6A00D2BF95 /* Sources */,
+				ED02A4451DD9AE6A00D2BF95 /* Frameworks */,
+				ED02A4461DD9AE6A00D2BF95 /* Resources */,
+				3F1E39DCF73FF4B7CC4C497B /* [CP] Embed Pods Frameworks */,
+				A2D4376D23615287843056FE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArtSignProSdkDemo;
+			productName = ArtSignProSdkDemo;
+			productReference = ED02A4481DD9AE6A00D2BF95 /* ArtSignProSdkDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED02A4401DD9AE6A00D2BF95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = qicode;
+				TargetAttributes = {
+					ED02A4471DD9AE6A00D2BF95 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = A3R6UY8WB2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = ED02A4431DD9AE6A00D2BF95 /* Build configuration list for PBXProject "ArtSignProSdkDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED02A43F1DD9AE6A00D2BF95;
+			productRefGroup = ED02A4491DD9AE6A00D2BF95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED02A4471DD9AE6A00D2BF95 /* ArtSignProSdkDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED02A4461DD9AE6A00D2BF95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED02A4561DD9AE6A00D2BF95 /* LaunchScreen.storyboard in Resources */,
+				ED02A4531DD9AE6A00D2BF95 /* Assets.xcassets in Resources */,
+				ED02A4511DD9AE6A00D2BF95 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F1E39DCF73FF4B7CC4C497B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtSignProSdkDemo/Pods-ArtSignProSdkDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E1B012895198E8CF8AFC46B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A2D4376D23615287843056FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtSignProSdkDemo/Pods-ArtSignProSdkDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED02A4441DD9AE6A00D2BF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED02A44E1DD9AE6A00D2BF95 /* ViewController.swift in Sources */,
+				ED02A44C1DD9AE6A00D2BF95 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED02A44F1DD9AE6A00D2BF95 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED02A4501DD9AE6A00D2BF95 /* Base */,
+				EDE4CD341DE9548B00750470 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED02A4541DD9AE6A00D2BF95 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED02A4551DD9AE6A00D2BF95 /* Base */,
+				EDE4CD351DE9548B00750470 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED02A4581DD9AE6A00D2BF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED02A4591DD9AE6A00D2BF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED02A45B1DD9AE6A00D2BF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FFABC7A65A76BF2C30B74C0 /* Pods-ArtSignProSdkDemo.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A3R6UY8WB2;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = ArtSignProSdkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qicode.ArtSignProSdkDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		ED02A45C1DD9AE6A00D2BF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEEDC206DF406A05F5F23296 /* Pods-ArtSignProSdkDemo.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A3R6UY8WB2;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = ArtSignProSdkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qicode.ArtSignProSdkDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED02A4431DD9AE6A00D2BF95 /* Build configuration list for PBXProject "ArtSignProSdkDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED02A4581DD9AE6A00D2BF95 /* Debug */,
+				ED02A4591DD9AE6A00D2BF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED02A45A1DD9AE6A00D2BF95 /* Build configuration list for PBXNativeTarget "ArtSignProSdkDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED02A45B1DD9AE6A00D2BF95 /* Debug */,
+				ED02A45C1DD9AE6A00D2BF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED02A4401DD9AE6A00D2BF95 /* Project object */;
+}
