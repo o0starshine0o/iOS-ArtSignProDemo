@@ -1,23 +1,28 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "856E8AEA0B09EF255D65703A20735C21BCAF05D4",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "31EB04D46993B81CEB323F62B685EA42721934B0",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "856E8AEA0B09EF255D65703A20735C21BCAF05D4" : 9223372036854775807,
+    "7624A91FA4C50DA083CF167A4814C6EF049B3456" : 9223372036854775807,
     "4DE5D8113295A05A8A3C1ACE70CFA8422A52C7DB" : 9223372036854775807,
-    "7624A91FA4C50DA083CF167A4814C6EF049B3456" : 9223372036854775807
+    "31EB04D46993B81CEB323F62B685EA42721934B0" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DDED9489-DA5C-4108-9F42-5E0221043A1A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "856E8AEA0B09EF255D65703A20735C21BCAF05D4" : "ArtSignProSdkDemo\/",
+    "7624A91FA4C50DA083CF167A4814C6EF049B3456" : "..\/Demo\/iOS\/pingpp-ios",
     "4DE5D8113295A05A8A3C1ACE70CFA8422A52C7DB" : "ArtSignPro-Sdk\/",
-    "7624A91FA4C50DA083CF167A4814C6EF049B3456" : "..\/Demo\/iOS\/pingpp-ios"
+    "31EB04D46993B81CEB323F62B685EA42721934B0" : "ArtSignProSdkDemo\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ArtSignProSdkDemo",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ArtSignProSdkDemo.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:o0starshine0o\/iOS-ArtSignProDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "31EB04D46993B81CEB323F62B685EA42721934B0"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:o0starshine0o\/iOS-ArtSignPro_Sdk.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
@@ -27,11 +32,6 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:o0starshine0o\/pingpp-ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7624A91FA4C50DA083CF167A4814C6EF049B3456"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:o0starshine0o\/iOS-ArtSignProDemo.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "856E8AEA0B09EF255D65703A20735C21BCAF05D4"
     }
   ]
 }

@@ -6,4 +6,5 @@ use_frameworks!
 target "ArtSignProSdkDemo" do
     # ArtSignPro
     pod 'ArtSignProSdk'
+    #pod 'ArtSignProSdk', :path => '../ArtSignPro-Sdk'
 end

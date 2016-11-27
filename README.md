@@ -99,13 +99,13 @@ AppVersion   >> 1.0.0
 </dict>
 ```
 
-#### 4.Import ArtSignProSdk
+#### 4.AppDelegate.swift > Import ArtSignProSdk
 
 ```swift
 import ArtSignProSdk
 ```
 
-#### 5.Extend ArtSignProDelegate
+#### 5.AppDelegate.swift > Extend ArtSignProDelegate
 
 ```swift
 @UIApplicationMain
@@ -114,7 +114,7 @@ class AppDelegate: ArtSignProDelegate {
 }
 ```
 
-#### 6.Init SDK and set environment 
+#### 6.AppDelegate.swift > Init SDK and set environment 
 
 ```swift
 ArtSignProSdk.initArtSignPro(key: "key_XXX", secret: "secret_XXX", scheme:"your app name")
@@ -126,7 +126,33 @@ ArtSignProSdk.setEnvironment(environment: .Test)
 > 4. in **Test** environment the perchase is **free**
 > 5. in **Production** environment the perchase will be **REAL**
 
-#### 7.Show ViewController
+#### 7.ViewController.swift > Can we show?
+import ArtSignProSdk
+```swift
+import ArtSignProSdk
+```
+implement ArtSignProSdkDelegate
+```swift
+class ViewController: UIViewController, ArtSignProSdkDelegate {
+    var isShowSdk:Bool = false
+    func isShowSdk(show:Bool){
+        isShowSdk = show
+    }
+    ···
+}
+```
+when some event happend eg:click,to show expert sign list or not
+```swift
+@IBAction func onClick(_ sender: UIButton) {
+    if isShowSdk {
+        performSegue(withIdentifier: "ShowExpertSignList", sender: self)
+    }else{
+        print("set pay method for this production before show expert sign list")
+    }
+}
+```
+
+#### 8.ViewController.swift > Show ViewController
 please show **ExpertSignListViewController** with 
 ```
 StoryBoard     >> ArtSignPro
