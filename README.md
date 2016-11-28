@@ -105,20 +105,29 @@ AppVersion   >> 1.0.0
 import ArtSignProSdk
 ```
 
-#### 5.AppDelegate.swift > Extend ArtSignProDelegate
+#### 5.AppDelegate.swift > Handle url
 
 ```swift
-@UIApplicationMain
-class AppDelegate: ArtSignProDelegate {
-···
+public func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool{
+    ···
+    return ArtSignProSdk.handleOpen(url: url)
+}
+
+public func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+    ···
+    return ArtSignProSdk.handleOpen(url: url)
 }
 ```
 
 #### 6.AppDelegate.swift > Init SDK and set environment 
 
 ```swift
-ArtSignProSdk.initArtSignPro(key: "key_XXX", secret: "secret_XXX", scheme:"your app name")
-ArtSignProSdk.setEnvironment(environment: .Test)
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    ···
+    ArtSignProSdk.initArtSignPro(key: "key_XXX", secret: "secret_XXX", scheme:"your scheme")
+    ArtSignProSdk.setEnvironment(environment: .Test)
+    ···
+}
 ```
 > 1. the key and secret in [Prepare][3]
 > 2. the scheme is **your app name** , when complete perchase , return to your app

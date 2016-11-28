@@ -10,7 +10,7 @@ import UIKit
 import ArtSignProSdk
 
 @UIApplicationMain
-class AppDelegate: ArtSignProDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate  {
 
     var window: UIWindow?
 
@@ -24,6 +24,16 @@ class AppDelegate: ArtSignProDelegate {
         ArtSignProSdk.initArtSignPro(key: "key_XXX", secret: "secret_XXX", scheme:"ArtSignProSdkDemo")
         ArtSignProSdk.setEnvironment(environment: .Test)
         return true
+    }
+    
+    
+    
+    public func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool{
+        return ArtSignProSdk.handleOpen(url: url)
+    }
+    
+    public func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return ArtSignProSdk.handleOpen(url: url)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
