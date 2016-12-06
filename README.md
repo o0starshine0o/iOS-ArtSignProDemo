@@ -18,11 +18,11 @@ To integrate ArtSignProSdk into your Xcode project using CocoaPods, specify it i
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'ArtSignProSdk'
+pod 'ArtSignProSdk'
 end
 ```
 
@@ -40,20 +40,16 @@ $ pod install
 
 ### Prepare
 
-#### 1.Get **[Key][1]** And **[Secret][2]**
+#### 1.Get **Key** And **Secret**
 
-```swift
-please connect our business
-```
+- for **test** environment , please click **[Here][1]**
+- for **production** environment , please click **[Here][2]**
+
+> Our business platform use different account in test and production environment. So , you have to register in test and production
 
 #### 2.Submit Business-Name, App-Identify and App-Version
 
-```
-for exmple:
-BusinessName >> Beijing QiCode Technology Co., Ltd.
-AppIdentify  >> com.qicode.ArtSignProSdkDemo
-AppVersion   >> 1.0.0
-```
+> In our business platform , fill your business name , app identify and app version . 
 
 ### Xcode
 
@@ -62,30 +58,30 @@ AppVersion   >> 1.0.0
 ```xml
 <key>CFBundleURLTypes</key>
 <array>
-	<dict>
-		<key>CFBundleTypeRole</key>
-		<string>Editor</string>
-		<key>CFBundleURLName</key>
-		<string></string>
-		<key>CFBundleURLSchemes</key>
-		<array>
-			<string>your app name</string>
-		</array>
-	</dict>
+<dict>
+<key>CFBundleTypeRole</key>
+<string>Editor</string>
+<key>CFBundleURLName</key>
+<string></string>
+<key>CFBundleURLSchemes</key>
+<array>
+<string>your app name</string>
+</array>
+</dict>
 </array>
 ```
-> please replace with **Your App Name**
+> please replace **your app name** with **Your App Name**
 
 #### 2.  info.plist > Add Queries Schemes
 
 ```xml
 <key>LSApplicationQueriesSchemes</key>
 <array>
-    <string>weixin</string>
-    <string>wechat</string>
-    <string>alipay</string>
-    <string>alipays<string>
-    <string>mqq<string>
+<string>weixin</string>
+<string>wechat</string>
+<string>alipay</string>
+<string>alipays<string>
+<string>mqq<string>
 </array>
 ```
 
@@ -94,39 +90,33 @@ AppVersion   >> 1.0.0
 ```xml
 <key>NSAppTransportSecurity</key>
 <dict>
-	<key>NSAllowsArbitraryLoads</key>
-	<true/>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
 </dict>
 ```
 
-#### 4.AppDelegate.swift > Import ArtSignProSdk
+#### 4.AppDelegate.swift > Import ArtSignProSdk , define variable
 
 ```swift
 import ArtSignProSdk
-```
 
-#### 5.AppDelegate.swift > Handle url
+class AppDelegate: UIResponder, UIApplicationDelegate  {
 
-```swift
-public func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool{
-    ···
-    return ArtSignProSdk.handleOpen(url: url)
-}
+var artSignPro:ArtSignPro?
 
-public func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-    ···
-    return ArtSignProSdk.handleOpen(url: url)
+···
 }
 ```
 
-#### 6.AppDelegate.swift > Init SDK and set environment 
+#### 5.AppDelegate.swift > Init SDK and set environment 
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    ···
-    ArtSignProSdk.initArtSignPro(key: "key_XXX", secret: "secret_XXX", scheme:"your scheme")
-    ArtSignProSdk.setEnvironment(environment: .Test)
-    ···
+artSignPro = ArtSignPro.init(key: "key_XXX", secret: "secret_XXX", scheme: "ArtSignProSdkDemo")
+artSignPro?.setEnvironment(environment: .Test)
+
+···
+return true
 }
 ```
 > 1. the key and secret in [Prepare][3]
@@ -135,29 +125,50 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 > 4. in **Test** environment the perchase is **free**
 > 5. in **Production** environment the perchase will be **REAL**
 
+#### 6.AppDelegate.swift > Handle url
+
+```swift
+public func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool{
+return (artSignPro?.handleOpen(url: url))!
+}
+
+public func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+return (artSignPro?.handleOpen(url: url))!
+}
+```
+
 #### 7.ViewController.swift > Can we show?
 import ArtSignProSdk
 ```swift
 import ArtSignProSdk
+
+override func viewDidLoad() {
+super.viewDidLoad()
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+appDelegate.artSignPro?.isShowSdk(delegate: self)
+
+···
+}
 ```
 implement ArtSignProSdkDelegate
 ```swift
 class ViewController: UIViewController, ArtSignProSdkDelegate {
-    var isShowSdk:Bool = false
-    func isShowSdk(show:Bool){
-        isShowSdk = show
-    }
-    ···
+var isShowSdk:Bool = false
+func isShowSdk(show:Bool){
+isShowSdk = show
+}
+
+···
 }
 ```
 when some event happend eg:click,to show expert sign list or not
 ```swift
 @IBAction func onClick(_ sender: UIButton) {
-    if isShowSdk {
-        performSegue(withIdentifier: "ShowExpertSignList", sender: self)
-    }else{
-        print("set pay method for this production before show expert sign list")
-    }
+if isShowSdk {
+performSegue(withIdentifier: "ShowExpertSignList", sender: self)
+}else{
+print("set pay method for this production before show expert sign list")
+}
 }
 ```
 
@@ -170,6 +181,6 @@ Bundle         >> org.cocoapods.ArtSignProSdk
 ```
 
 
-  [1]: http://www.artsignpro.com/web/
-  [2]: http://www.artsignpro.com/web/
-  [3]: https://github.com/Alamofire/Alamofire/blob/master/README.md#usage
+[1]: http://business.test.qima.tech/
+[2]: http://business.qima.tech/
+[3]: https://github.com/o0starshine0o/iOS-ArtSignProDemo#prepare

@@ -15,7 +15,8 @@ class ViewController: UIViewController, ArtSignProSdkDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        ArtSignProSdk.isShowSdk(delegate: self)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.artSignPro?.isShowSdk(delegate: self)
     }
 
     override func didReceiveMemoryWarning() {

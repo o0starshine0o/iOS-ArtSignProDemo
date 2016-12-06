@@ -13,27 +13,21 @@ import ArtSignProSdk
 class AppDelegate: UIResponder, UIApplicationDelegate  {
 
     var window: UIWindow?
-
+    var artSignPro:ArtSignPro?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        // for production only, please use your key and secret
-//        ArtSignProSdk.initArtSignPro(key: "key_XXX", secret: "secret_XXX", scheme:"ArtSignProSdkDemo")
-//        ArtSignProSdk.setEnvironment(environment: .Production)
-        // for test only , please use your key and secret
-        ArtSignProSdk.initArtSignPro(key: "key_XXX", secret: "secret_XXX", scheme:"ArtSignProSdkDemo")
-        ArtSignProSdk.setEnvironment(environment: .Test)
+        artSignPro = ArtSignPro.init(key: "key_XXX", secret: "secret_XXX", scheme: "ArtSignProSdkDemo")
+        artSignPro?.setEnvironment(environment: .Test)
         return true
     }
     
-    
-    
     public func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool{
-        return ArtSignProSdk.handleOpen(url: url)
+        return (artSignPro?.handleOpen(url: url))!
     }
     
     public func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return ArtSignProSdk.handleOpen(url: url)
+        return (artSignPro?.handleOpen(url: url))!
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
